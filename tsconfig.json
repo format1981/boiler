@@ -1,0 +1,12 @@
+{
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "noImplicitAny": false,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+}
