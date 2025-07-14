@@ -1,7 +1,12 @@
-//import {someMethod1} from "@/utils/some_methods.util";
-//import {getNumber} from "@/shared/number.helpers";
+//import './assets/base.css'
 
-//const val = 555
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
-//console.log(someMethod1('rrr'));
-//getNumber();
+import App from './App.vue'
+
+const app = createApp(App)
+
+app.use(createPinia())
+
+app.mount('#app')

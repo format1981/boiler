@@ -16,21 +16,11 @@
  * 6. Для именования структуры папок используем "kebab-case"
  */
 
-import typescriptParser from "@typescript-eslint/parser";
-import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import boundaries from "eslint-plugin-boundaries";
-//import globals from "globals";
 
 export default {
     files: ["src/**/*.{ts,vue}"],
-    languageOptions: {
-        parser: typescriptParser,
-        /*globals: {
-            ...globals.node,
-        },*/
-    },
     plugins: {
-        "@typescript-eslint": typescriptEslintPlugin,
         boundaries,
     },
     settings: {
@@ -107,24 +97,10 @@ export default {
                 pattern: "src/core/http/*.ts",
             },
         ],
-        "boundaries/include": ["src/**/*.*"],
-        "import/resolver": {
-            typescript: {
-                alwaysTryTypes: true,
-            },
-        },
     },
     rules: {
-        //...js.configs.recommended.rules,
-        //...typescriptEslintPlugin.configs.recommended.rules,
-        //...eslintConfigPrettier.rules,
-        //...eslintPluginPrettierRecommended.rules,
-        ...boundaries.configs.strict.rules,
-        // Структура слоев (сверху вниз):
-        // views -> components -> store -> api -> types
-        // Нельзя импортировать из более верхнего слоя
-        // Например: в файл компонента можно импортировать из файла store,
-        // но нельзя в файл store импортировать из файла component
+        ...boundaries.configs.recommended.rules,
+        "boundaries/no-unknown-files": [2],
         "boundaries/element-types": [
             2,
             {
@@ -202,5 +178,5 @@ export default {
                 ],
             },
         ],
-    },
+    }
 }

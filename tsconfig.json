@@ -1,12 +1,11 @@
 {
-  "exclude": ["node_modules"],
-  "compilerOptions": {
-    "composite": true,
-    "noEmit": true,
-    "baseUrl": ".",
-    "noImplicitAny": false,
-    "paths": {
-      "@/*": ["./src/*"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
     }
-  },
+  ]
 }
