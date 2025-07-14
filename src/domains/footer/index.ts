@@ -1,1 +1,1 @@
-export { default } from './views/FooterView.vue';
+export { default } from './views/FooterView.vue'

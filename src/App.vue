@@ -7,8 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import FooterView from '@/domains/footer';
-import HeaderView from '@/domains/header/views/HeaderView.vue';
+import FooterView from '@/domains/footer'
+import HeaderView from '@/domains/header'
 </script>
 
 <style>
@@ -25,22 +25,22 @@ body {
   color: #000000;
   background: #ffffff;
   transition:
-      color 0.5s,
-      background-color 0.5s;
+    color 0.5s,
+    background-color 0.5s;
   line-height: 1.6;
   font-family:
-      Inter,
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      sans-serif;
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

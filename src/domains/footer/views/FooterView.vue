@@ -1,3 +1,3 @@
 <template>
-	<div>FooterView</div>
+  <div>FooterView</div>
 </template>
